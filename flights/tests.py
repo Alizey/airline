@@ -42,9 +42,9 @@ class FlightTestCase(TestCase):
 
     def test_index(self):
             c = Client()
-            response = c.get('/flights/')
+            response = c.get("/flights/")
             self.assertEqual(response.status_code , 200)
-            self.assertEqual(response.context["flights"].count() , 3)
+            self.assertEqual(response.context['flights'].count() , 3)
 
     def test_valid_flight_page(self):
             a1 = Airport.objects.get(code='AAA')
